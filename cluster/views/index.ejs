@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body ng-app="clusterApp" ng-controller="MainCtrl">
+    <h1><%= title %></h1>
+    <form ng-submit="getPids()">
+	<h3>Test PIDs</h3>
+	<button type="submit">TestPids</button>
+    </form>
+    <form ng-submit="getMyPids()">
+	<h3>Display Pids</h3>
+	<button type="submit">GetPids</button>
+    </form>
+
+    <ul>
+	<li ng-repeat="node in cluster">{{node.pid}}</li>
+    </ul>
+  
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="/javascripts/angularApp.js"></script>
+	</body>
+</html>
